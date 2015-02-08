@@ -6,7 +6,7 @@ public class Main {
 	
 	public static void main(String[] args) {
 		
-		Taco tacoPastor = new Taco("Al pastor");
+		Taco tacoPastor = new Taco("al pastor");
 		System.out.println("Quiero un taco " + tacoPastor.getName());
 		
 		// How to get the class, if the instance is available
