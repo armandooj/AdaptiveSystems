@@ -6,3 +6,5 @@ lab1:
 	@echo	
 	@echo "COMPLETED"
 	@echo "to execute run: java -jar reflection.jar"
+	@echo "to run the agent: java -javaagent:reflection.jar -cp . labs.reflection.Main"
+
