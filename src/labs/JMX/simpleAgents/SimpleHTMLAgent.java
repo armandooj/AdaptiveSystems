@@ -33,8 +33,19 @@ public class SimpleHTMLAgent {
       }
    }
 
+   // Utility method: so that the application continues to run
+   private static void waitForEnterPressed() {
+      try {
+         System.out.println("Press to continue...");
+         System.in.read();
+      } catch (Exception e) {
+         e.printStackTrace();
+      }
+    }
+
    public static void main(String argv[]) {
       SimpleHTMLAgent agent = new SimpleHTMLAgent();
-      System.out.println("SimpleAgent is running...");
+      System.out.println("SimpleHTMLAgent is running...");
+      SimpleHTMLAgent.waitForEnterPressed();
    }
 }
