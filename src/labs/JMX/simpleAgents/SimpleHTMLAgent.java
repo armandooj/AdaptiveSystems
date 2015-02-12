@@ -1,4 +1,4 @@
-package labs.mbean.simpleAgents;
+package labs.JMX.simpleAgents;
 
 import javax.management.*;
 import java.lang.management.*;

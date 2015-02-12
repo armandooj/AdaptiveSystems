@@ -1,4 +1,4 @@
-package labs.mbean.simpleAgents;
+package labs.JMX.simpleAgents;
 
 public interface HelloMBean {
 

@@ -26,7 +26,7 @@ public class Main {
 			e.printStackTrace();
 		}	
 		
-		System.out.println(MyAgent.getObjectSize(tacoPastor));
+		MyAgent.getObjectSize(tacoPastor);
 	}
 
 }

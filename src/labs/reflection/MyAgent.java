@@ -8,8 +8,6 @@ public class MyAgent {
   
   public static void premain(String args, Instrumentation inst) {
 	globalInstr = inst;
-	
-	System.out.println(globalInstr);
 	  
     Taco obj = new Taco("al pastor");
     long size = inst.getObjectSize(obj);
@@ -17,7 +15,7 @@ public class MyAgent {
     
   }
   
-  public static long getObjectSize(final Object obj) {
+  public static long getObjectSize(Object obj) {
 	    if (globalInstr == null)
 	      throw new IllegalStateException("Agent not initted");
 	    return globalInstr.getObjectSize(obj);
