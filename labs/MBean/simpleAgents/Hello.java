@@ -1,4 +1,4 @@
-package labs.mbean;
+package labs.mbean.simpleAgents;
 
 public class Hello implements HelloMBean {
 	   private String message = null;
