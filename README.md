@@ -1,2 +1,0 @@
-# AdaptiveSystems
-Adaptive Systems Projects
