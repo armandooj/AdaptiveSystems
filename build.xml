@@ -10,7 +10,8 @@
 	
 	<path id="project.jars">
 	    <fileset dir="lib">
-	        <include name="**/*.jar"/>
+	        <include name="**/jmxtools.jar"/>
+	    	<include name="**/jmxtools-1.2.jar"/>
 	    </fileset>
 	</path>
 	
@@ -55,7 +56,6 @@
 		<jar destfile="${dist.dir}\reflection.jar" basedir="${build.dir}">
 			<manifest>
 				<attribute name="Main-Class" value="labs.reflection.Main" />
-				<attribute name="Class-Path" value="${lib.dir}" />
 			</manifest>
 		</jar>
 		
@@ -63,15 +63,15 @@
 		<jar destfile="${dist.dir}\JMX.SimpleAgent.jar" basedir="${build.dir}">
 			<manifest>
 				<attribute name="Main-Class" value="labs.JMX.simpleAgents.SimpleAgent" />
-				<attribute name="Class-Path" value="${lib.dir}" />
 			</manifest>
 		</jar>
 		
 		<!-- Jar for MBean SimpleHTMLAgent -->
 		<jar destfile="${dist.dir}\JMX.SimpleHTMLAgent.jar" basedir="${build.dir}">
+			 <fileset dir="${build.dir}"/>
+			    <zipfileset includes="**/*.class" src="lib/jmxtools-1.2.jar"/>
 			<manifest>
 				<attribute name="Main-Class" value="labs.JMX.simpleAgents.SimpleHTMLAgent" />
-				<attribute name="Class-Path" value="${lib.dir}" />
 			</manifest>
 		</jar>
 	</target>
@@ -79,18 +79,5 @@
 	<target name="main" depends="compile, jar, docs">
 		<description>Main target</description>
 	</target>
-	
-<!--
-	<target name="execute" depends="main">
-	
-		<path id="runtime.path">
-        	<fileset dir="${build.dir}" includes="*.jar"/>
-  		</path>
-  		
-  		<java classname="test.Main" fork="false" classpathref="runtime.path">
-    	</java>
-  		
-  	</target>
--->
   	
 </project> 
