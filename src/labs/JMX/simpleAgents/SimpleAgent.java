@@ -27,7 +27,7 @@ public class SimpleAgent {
    // Utility method: so that the application continues to run
    private static void waitForEnterPressed() {
       try {
-         System.out.println("Press to continue...");
+         System.out.println("Press  to continue...");
          System.in.read();
       } catch (Exception e) {
          e.printStackTrace();
